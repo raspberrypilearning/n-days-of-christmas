@@ -26,13 +26,13 @@ Importing the words
 1.  Open Python 3 (IDLE) and create a new file called `christmas.py`. Save it in your `n-day` directory.
 2.  To make the song as interesting as possible, you're going to need to randomly pick words. So at the top of your file, you can import the `choice` function from the `random` module.
 
-	``` {.python}
+	```python
 	from random import choice
 	```
 
 1.  Next you can create function that will allow you to open text files.
 
-  ``` {.python}
+  ```python
 	def load_words(text_file):
 		with open(text_file, 'r', encoding='utf8') as f:
 			words = f.read()
@@ -41,14 +41,14 @@ Importing the words
 
 1.  You can see what the first thirty characters in `words` contains by switching to the Python interpreter.
 
-	``` {.python}
+	```python
 	words = load_words('nouns.txt') 
 	words[0:30]
 	```
 
 1.  This isn't much use to you, but you can convert the long string, into a list by using `splitlines()`. Edit your file so it looks like this:
 
-  ``` {.python}
+  ```python
 	def load_words(text_file):
 		with open(text_file, 'r', encoding='utf8') as f:
 			words = f.read().splitlines()
@@ -57,7 +57,7 @@ Importing the words
 
 1.  Save and run your file, then switch back to the interpreter and have a look at `words` now.
 
-	``` {.python}
+	```python
 	words = load_words('nouns.txt') 
 	words[0:30]
 	```
@@ -71,7 +71,7 @@ Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `l
 
 1.  To start with you can load the words up into two separate list, and create an empty list, ready to store your verbs.
 
-  ``` {.python}
+  ```python
 	def get_matching(items):
 		nouns = load_words('nouns.txt')
 		words = load_words('words.txt')
@@ -82,37 +82,37 @@ Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `l
 
 1.  This gets you the first character of the string `Hello`.
 
-	``` {.python}
+	```python
 	'Hello'[0]
 	```
 
 1.  To get the first three characters you could type:
 
-	``` {.python}
+	```python
 	'Hello'[0:3]
 	```
 
 1.  Or even just:
 
-	``` {.python}
+	```python
 	'Hello'[:3]
 	```
 
 1.  To get the last character you could type:
 
-	``` {.python}
+	```python
 	'Hello'[-1]
 	```
 
 1.  And to get the last three characters you can type:
 
-	``` {.python}
+	```python
 	'Hello'[-3::]
 	```
 
 1.  This technique can be used to check if a word ends in `ing` and if it does, you can add it to your list of verbs.
 
-	``` {.python}
+	```python
 	def get_matching(items):
 		nouns = load_words('nouns.txt')
 		words = load_words('words.txt')
@@ -128,7 +128,7 @@ Getting some random nouns
 
 1.  You can get some random nouns by shuffling the list of nouns, and then popping off the end of the list inside a loop.
 
-	``` {.python}
+	```python
 	rand_nouns = []
 	shuffle(nouns)
 	for item in range(items):
@@ -150,20 +150,20 @@ In your version of the song, they'll always share the same first letter, so you'
 
 1.  You can start by creating an empty dictionary inside the `get_matching()` function:
 
-	``` {.python}
+	```python
 	matching = {}
 	```
 
 1.  Next you want to iterate through the random nouns you have selected, and add each one to the dictionary as a *key*, with an empty list as it's *value*.
 
-  ``` {.python}
+  ```python
 	for noun in rand_nouns:
 		matching[noun] = []
   ```
 
 1.  Still within that loop, you can iterate through all the verbs, and if the first character of the verb is the same as the first character of the noun, you can add them to the list for that noun.
 
-	``` {.python}
+	```python
 	  for verb in verbs:
 		  if verb[0].upper() == noun[0].upper():
 			  matching[noun].append(verb)
@@ -172,7 +172,7 @@ In your version of the song, they'll always share the same first letter, so you'
 1.  Finally you want to `return` the `matching` dictionary.
 2.  Your whole function should now look like this:
 
-  ``` {.python}
+  ```python
 	def get_matching(items):
 		nouns = load_words('nouns.txt')
 		words = load_words('words.txt')
@@ -199,7 +199,7 @@ In your version of the song, they'll always share the same first letter, so you'
 
 1.  Save and run the code, then switch over to the interpreter and test it out.
 
-	``` {.python}
+	```python
 	>>> matching = get_matching(12)
 	>>> matching.keys()
 	```
@@ -215,7 +215,7 @@ There's another way of producing these however, using list and dictionary compre
 
 1.  These four lines of code:
 
-	``` {.python}
+	```python
 	verbs = []                
 	for word in words:        
 		if word[-3::] == 'ing':
@@ -224,13 +224,13 @@ There's another way of producing these however, using list and dictionary compre
 
 	can be condensed down to:
 
-	``` {.python}
+	```python
 	verbs = [word for word in words if word[-3::] == 'ing']
 	```
 
 1.  These lines of code:
 
-	``` {.python}
+	```python
 	rand_nouns = []                     
 	for item in range(items):           
 		rand_nouns.append(choice(nouns))
@@ -238,7 +238,7 @@ There's another way of producing these however, using list and dictionary compre
 
 	can be condensed down to
 
-	``` {.python}
+	```python
 	rand_nouns = []
 	shuffle(nouns)
 	for item in range(items):
@@ -247,7 +247,7 @@ There's another way of producing these however, using list and dictionary compre
 
 1.  Lastly, the following code:
 
-	``` {.python}
+	```python
 	  matching = {}                                 
 	  for noun in rand_nouns:                       
 		  matching[noun] = []                       
@@ -258,13 +258,13 @@ There's another way of producing these however, using list and dictionary compre
 
 	can be condensed down to:
 
-	``` {.python}
+	```python
 	matching = {rand_nouns[item]:[verb for verb in verbs if verb[0].upper() == rand_nouns[item][0].upper()] for item in range(items)}
 	```
 
 1.  Your function should now look like:
 
-	``` {.python}
+	```python
 	def get_matching(items):
 		nouns = load_words('nouns.txt')
 		words = load_words('words.txt')
@@ -294,13 +294,13 @@ You can create a new function to handle this.
 
 1.  Define a new function called `get_suffix`.
 
-	``` {.python}
+	```python
 	def get_suffix(num):
 	```
 
 1.  A dictionary would be a useful way of storing the suffixes.
 
-	``` {.python}
+	```python
 	def get_suffix(num):
 		endings = {1:'st',2:'nd',3:'rd',4:'th'}
 	```
@@ -316,21 +316,21 @@ You can create a new function to handle this.
 
 2.  Try this in the interpreter to get the remainder of dividing by 2
 
-	``` {.python}
+	```python
 	12 % 2
 	11 % 2
 	```
 
 1.  Or to get the remainder of dividing by 5
 
-	``` {.python}
+	```python
 	15 % 5
 	14 % 5
 	```
 
 1.  Now see what happens when you find the remainder of division by 10
 
-	``` {.python}
+	```python
 	20 % 10
 	12 % 10
 	6 % 10
@@ -338,7 +338,7 @@ You can create a new function to handle this.
 
 1.  You always get the last digit of the number. Go back to your `get_suffix` function, and you can code up the rules stated above.
 
-	``` {.python}
+	```python
 	def get_suffix(num):
 		endings = {1:'st',2:'nd',3:'rd',4:'th'}
 		if 10 < num < 20 or num % 10 > 3 or num % 10 == 0:
@@ -354,20 +354,20 @@ The last step is to actually print your song
 
 1.  Create a new function that takes the number of `days` in the song as an argument.
 
-	``` {.python}
+	```python
 	def display_song(days):
 	```
 
 1.  You're going to keep the last five lines of the traditional song as they are, so the number of noun:verb pairs you will need is 5 less than the number of days.
 
-	``` {.python}
+	```python
 	def display_song(days):
 		matching = get_matching(days-5)
 	```
 
 1.  Now you can print the first line, including the correct suffix.
 
-	``` {.python}
+	```python
 	def display_song(days):
 		matching = get_matching(days-5)
 		print('On the', str(days) + get_suffix(days), 'day of Christmas, my true love sent to me')
@@ -375,7 +375,7 @@ The last step is to actually print your song
 
 1.  Next you want to to get a list of all the nouns in the `matching` dictionary.
 
-	``` {.python}
+	```python
 	def display_song(days):
 		matching = get_matching(days-5)
 		print('On the', str(days) + get_suffix(days), 'day of Christmas, my true love sent to me')
@@ -384,7 +384,7 @@ The last step is to actually print your song
 
 1.  You can iterate over this list, and so long as the day is greater than 5, you can print off matching noun and verb pairs. If the day hits 5, then the loop can break. Because there are 5 less nouns and verbs that *days of Christmas* and lists are indexed from 0, you'll need to subtract 6 from `days` to get the correct index.
 
-	``` {.python}
+	```python
 	def display_song(days):
 		matching = get_matching(days-5)
 
@@ -400,7 +400,7 @@ The last step is to actually print your song
 
 1.  To finish off the function, you can print off the standard end to the song. The function should look like this:
 
-	``` {.python}
+	```python
 	def get_suffix(num):
 		endings = {1:'st',2:'nd',3:'rd',4:'th'}
 		if 10 < num < 20 or num % 10 > 3 or num % 10 == 0:
@@ -428,7 +428,7 @@ The last step is to actually print your song
 
 1.  To finish off the song, you can ask the user for the number of days, and then run the `display_song` function.
 
-	``` {.python}
+	```python
 	days = int(input('How many days of Christmas are there?'))
 	display_song(days)
 	```

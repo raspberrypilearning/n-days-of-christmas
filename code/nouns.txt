@@ -16,7 +16,6 @@ Bee
 Bison
 Boar
 Buffalo
-Galago
 Butterfly
 Camel
 Caribou
@@ -68,6 +67,7 @@ Flamingo
 Fly
 Fox
 Frog
+Galago
 Gaur
 Gazelle
 Gerbil

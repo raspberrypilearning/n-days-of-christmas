@@ -10,18 +10,20 @@ Getting the text files.
 
 In the 12 Days of Christmas, the lyrics follow a general trend of:
 
-12 nouns a doing 11 nouns a doing 10 nouns a doing
+- 12 nouns a doing
+- 11 nouns a doing
+- 10 nouns a doing
 
 To create your program you're going to need a long list of nouns and a long list of verbs.
 
-1.  Create a new directory called \`n-days\`, to save both the files in
+1.  Create a new directory called `n-days`, to save both the files in
 2.  The **nouns.txt** file can be downloaded [here](...)
 3.  The **words.txt** file can be downloaded [here](...)
 
 Importing the words
 -------------------
 
-1.  Open Python 3 (IDLE) and create a new file called `christmas.py`. Save it in your \`n-day\` directory.
+1.  Open Python 3 (IDLE) and create a new file called `christmas.py`. Save it in your `n-day` directory.
 2.  To make the song as interesting as possible, you're going to need to randomly pick words. So at the top of your file, you can import the `choice` function from the `random` module.
 
 	``` {.python}
@@ -280,11 +282,11 @@ Getting suffixes for numerals
 
 The first line of the song changes, depending on the number of days. You might have:
 
-/On the 3rd day of Christmas.../
+*On the 3rd day of Christmas...*
 
-or
+**or**
 
-/On the 8th day of Christmas.../
+*On the 8th day of Christmas...*
 
 with the *suffix* on the number changing between **st**, **nd**, **rd** and **th**
 

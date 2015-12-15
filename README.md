@@ -2,7 +2,7 @@
 
 ![](cover.png)
 
-In this resource you will create a script that will print out a version of the song The Twelve Days of Christmas, using a random selection of verbs and nouns, for any number of days you like.
+In this resource you will create a script that will print out a version of the song 'The Twelve Days of Christmas', using a random selection of verbs and nouns, for any number of days you like.
 
 ## Licence
 

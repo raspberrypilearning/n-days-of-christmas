@@ -1,12 +1,10 @@
-The N Days Of Christmas
-=======================
+* The N Days Of Christmas
 
 We all love Christmas, and what we love the most is Christmas songs. Unfortunately, most Christmas songs just don't go on for long enough. Songs like 'The Twelve Days of Christmas' would be so much better if you they could be stretched out a little longer. How about 'The Fifty Days of Christmas', 'The Hundred Days of Christmas', or even 'The Thousand Days of Christmas'!.
 
 In this resource, you'll be creating a Python script to produce the lyrics to The N Days of Christmas where N is any number you want it to be. That way, when you go out carol singing, you only need to remember the lyrics to one, very long, song.
 
-Getting the text files.
------------------------
+** Getting the text files.
 
 In 'The Twelve Days of Christmas', the lyrics follow a general trend of:
 
@@ -20,8 +18,7 @@ To create your program you're going to need a long list of nouns and a long list
 2.  The **nouns.txt** file can be downloaded [here](https://raw.githubusercontent.com/raspberrypilearning/n-days-of-christmas/master/code/nouns.txt)
 3.  The **words.txt** file can be downloaded [here](https://raw.githubusercontent.com/raspberrypilearning/n-days-of-christmas/master/code/words.txt)
 
-Importing the words
--------------------
+** Importing the words
 
 1.  Open Python 3 (IDLE) and create a new file called `christmas.py`. Save it in your `n-day` directory.
 2.  To make the song as interesting as possible, you're going to need to randomly pick words. So at the top of your file, you can import the `choice` function from the `random` module.
@@ -64,8 +61,7 @@ Importing the words
 
 1.  Now `words` consists of a list of words, the string having been broken up at every `newline`.
 
-Getting all the verbs and nouns
--------------------------------
+** Getting all the verbs and nouns
 
 Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `load_words` function. The verbs are a little trickier: they're in `words.txt` somewhere, but you're going to have to find them.
 
@@ -123,8 +119,7 @@ Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `l
 				verbs.append(word)
 	```
 
-Getting some random nouns
--------------------------
+** Getting some random nouns
 
 1.  You can get some random nouns by shuffling the list of nouns, and then popping off the end of the list inside a loop.
 
@@ -135,8 +130,7 @@ Getting some random nouns
 		rand_nouns.append(nouns.pop())
 	```
 
-Pairing verbs and nouns.
-------------------------
+** Pairing verbs and nouns.
 
 In The Twelve Days of Christmas, the verbs and nouns are often alliterative, which means they share the same first letter:
 
@@ -204,8 +198,7 @@ In your version of the song, nouns and verbs will always be alliterative, so you
 	>>> matching.keys()
 	```
 
-Turning loops to list comprehensions
-------------------------------------
+** Turning loops to list comprehensions
 
 You can skip this step if you like as you are only going to re-factor your code. If you don't want to play with comprehensions, just move down to the next section. Otherwise, read on!
 
@@ -277,8 +270,7 @@ There's another way of producing these, though, using list and dictionary compre
 
 1.  You can use either of your `get_matching` functions, but remember to comment out the one you don't use.
 
-Getting suffixes for numerals
------------------------------
+** Getting suffixes for numerals
 
 How do we deal with numbers in our program? Remember that the first line of the song changes, depending on which day we begin with. You might have:
 
@@ -347,8 +339,7 @@ You can create a new function to handle this.
 			return endings[num%10]
 	```
 
-Printing the whole song
------------------------
+** Printing the whole song
 
 The last step is to actually print your song
 

@@ -10,9 +10,9 @@ Getting the text files.
 
 In 'The Twelve Days of Christmas', the lyrics follow a general trend of:
 
-- 12 nouns a-doing
-- 11 nouns a-doing
-- 10 nouns a-doing
+- Twelve nouns a-doing
+- Eleven nouns a-doing
+- Ten nouns a-doing
 
 To create your program you're going to need a long list of nouns and a long list of verbs.
 
@@ -67,9 +67,9 @@ Importing the words
 Getting all the verbs and nouns
 -------------------------------
 
-Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `load_words` function. The verbs is a little trickier, they're in `words.txt` somewhere, but you're going to have to find them.
+Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `load_words` function. The verbs are a little trickier: they're in `words.txt` somewhere, but you're going to have to find them.
 
-1.  To start with you can load the words up into two separate list, and create an empty list, ready to store your verbs.
+1.  To start with you can load the words up into two separate lists and create an empty list, ready to store your verbs.
 
   ```python
 	def get_matching(items):
@@ -78,7 +78,7 @@ Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `l
 		verbs = []
   ```
 
-1.  You can get all the verbs by finding words that end in `ing`. A little bit of string slicing can help you get this. Switch over to the interpreter and try out the following.
+1.  You can get all the verbs by finding words that end in '-ing'. A little bit of string slicing can help you get this. Switch over to the interpreter and try out the following.
 
 1.  This gets you the first character of the string `Hello`.
 

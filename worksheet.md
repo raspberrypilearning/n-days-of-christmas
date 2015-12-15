@@ -275,12 +275,12 @@ There's another way of producing these, though, using list and dictionary compre
 		return matching
 	```
 
-1.  You can use either of your `get_matching` functions, just remember to comment out the one you don't use.
+1.  You can use either of your `get_matching` functions, but remember to comment out the one you don't use.
 
 Getting suffixes for numerals
 -----------------------------
 
-The first line of the song changes, depending on the number of days. You might have:
+How do we deal with numbers in our program? Remember that the first line of the song changes, depending on which day we begin with. You might have:
 
 'On the third day of Christmas...'
 
@@ -288,7 +288,7 @@ The first line of the song changes, depending on the number of days. You might h
 
 'On the eighth day of Christmas...'
 
-with the uffix on the number changing between **-st**, **-nd**, **-rd** and **-th**
+with the suffix on the number changing between **-st**, **-nd**, **-rd** and **-th**
 
 You can create a new function to handle this.
 
@@ -307,12 +307,12 @@ You can create a new function to handle this.
 
 1.  With a clever bit of maths, we can find out the suffix for any number. The rules are:
 
--   If the number is between 10 and 20 then the suffix is **th**, or...
--   If the last digit of the number is greater than 3, then the suffix is **th**, or...
--   If the last digit of the number is 0, then the suffix is **th**, or...
--   If the number ends in 1, 2, or 3 the suffix is **st**, **nd** and **rd**, respectively.
+-   If the number is between 10 and 20 then the suffix is **-th**, or...
+-   If the last digit of the number is greater than 3, then the suffix is **-th**, or...
+-   If the last digit of the number is 0, then the suffix is **-th**, or...
+-   If the number ends in 1, 2, or 3 the suffix is **-st**, **-nd** and **-rd**, respectively.
 
-1.  So how do you get the last digit of a number? You can use a handy operator called *modulo*, that finds the remainder after a division. In Python you use the symbol `%`
+1.  So how do you get the last digit of a number? You can use a handy operator called **modulo**, which finds the remainder after a division. In Python you use the symbol `%`
 
 2.  Try this in the interpreter to get the remainder of dividing by 2
 
@@ -358,7 +358,7 @@ The last step is to actually print your song
 	def display_song(days):
 	```
 
-1.  You're going to keep the last five lines of the traditional song as they are, so the number of noun:verb pairs you will need is 5 less than the number of days.
+1.  You're going to keep the last five lines of the traditional song as they are, so the number of noun:verb pairs you will need is five fewer than the number of days.
 
 	```python
 	def display_song(days):
@@ -382,7 +382,7 @@ The last step is to actually print your song
 		nouns = list(matching.keys())
 	```
 
-1.  You can iterate over this list, and so long as the day is greater than 5, you can print off matching noun and verb pairs. If the day hits 5, then the loop can break. Because there are 5 less nouns and verbs that *days of Christmas* and lists are indexed from 0, you'll need to subtract 6 from `days` to get the correct index.
+1.  You can iterate over this list, and so long as the number of the day is greater than five, you can print off matching noun and verb pairs. If the number of the day hits five, then the loop can break. Because there are five fewer nouns and verbs than there are 'days of Christmas', and because lists are indexed from zero, you'll need to subtract six from `days` to get the correct index.
 
 	```python
 	def display_song(days):

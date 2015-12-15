@@ -1,4 +1,4 @@
-By coding the N Days of Christmas with Python, you will learn:
+By coding The N Days of Christmas with Python, you will learn:
 
 - How to import text files into a list
 - How to construct lists and dictionaries using comprehensions

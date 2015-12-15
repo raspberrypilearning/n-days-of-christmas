@@ -1,18 +1,18 @@
 The N Days Of Christmas
 =======================
 
-We all love Christmas, and what we love the most is Christmas songs. Unfortunately, most Christmas songs just don't go on for long enough. Songs like The Twelve Days of Christmas would be so much better if you they could be stretched out a little longer. How about The Fifty Days of Christmas, The Hundred Days of Christmas, or even The Thousand Days of Christmas!.
+We all love Christmas, and what we love the most is Christmas songs. Unfortunately, most Christmas songs just don't go on for long enough. Songs like 'The Twelve Days of Christmas' would be so much better if you they could be stretched out a little longer. How about 'The Fifty Days of Christmas', 'The Hundred Days of Christmas', or even 'The Thousand Days of Christmas'!.
 
 In this resource, you'll be creating a Python script to produce the lyrics to The N Days of Christmas where N is any number you want it to be. That way, when you go out carol singing, you only need to remember the lyrics to one, very long, song.
 
 Getting the text files.
 -----------------------
 
-In The Twelve Days of Christmas, the lyrics follow a general trend of:
+In 'The Twelve Days of Christmas', the lyrics follow a general trend of:
 
-- 12 nouns a doing
-- 11 nouns a doing
-- 10 nouns a doing
+- 12 nouns a-doing
+- 11 nouns a-doing
+- 10 nouns a-doing
 
 To create your program you're going to need a long list of nouns and a long list of verbs.
 
@@ -30,7 +30,7 @@ Importing the words
 	from random import choice
 	```
 
-1.  Next you can create function that will allow you to open text files.
+1.  Next, you can create a function which will allow you to open text files.
 
   ```python
 	def load_words(text_file):
@@ -39,14 +39,14 @@ Importing the words
 		return words
   ```
 
-1.  You can see what the first thirty characters in `words` contains by switching to the Python interpreter.
+1.  You can see what the first thirty characters in `words` contain by switching to the Python interpreter.
 
 	```python
 	words = load_words('nouns.txt') 
 	words[0:30]
 	```
 
-1.  This isn't much use to you, but you can convert the long string, into a list by using `splitlines()`. Edit your file so it looks like this:
+1.  This isn't much use to you, but you can convert the long string into a list by using `splitlines()`. Edit your file so it looks like this:
 
   ```python
 	def load_words(text_file):
@@ -62,7 +62,7 @@ Importing the words
 	words[0:30]
 	```
 
-1.  Now `words` consists of a list of words, the string having been broken up at every *newline*.
+1.  Now `words` consists of a list of words, the string having been broken up at every `newline`.
 
 Getting all the verbs and nouns
 -------------------------------
@@ -78,7 +78,7 @@ Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `l
 		verbs = []
   ```
 
-1.  You can get all the verbs by finding words that end in `ing`. A little bit of string slicing can help you get this. Switch over to the Interpreter and try out the following.
+1.  You can get all the verbs by finding words that end in `ing`. A little bit of string slicing can help you get this. Switch over to the interpreter and try out the following.
 
 1.  This gets you the first character of the string `Hello`.
 

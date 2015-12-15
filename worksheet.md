@@ -78,7 +78,7 @@ Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `l
 		verbs = []
   ```
 
-1.  You can get all the verbs by finding words that end in '-ing'. A little bit of string slicing can help you get this. Switch over to the interpreter and try out the following.
+	You can locate all the verbs by finding words that end in '-ing'. A little bit of string slicing can help you here. Switch over to the interpreter and try out the examples outlined in the following steps.
 
 1.  This gets you the first character of the string `Hello`.
 
@@ -110,7 +110,7 @@ Getting all the nouns is easy, as you can just pass the `nouns.txt` into your `l
 	'Hello'[-3::]
 	```
 
-1.  This technique can be used to check if a word ends in `ing` and if it does, you can add it to your list of verbs.
+1.  This technique can be used to check if a word ends in `ing`; if it does, you can add it to your list of verbs.
 
 	```python
 	def get_matching(items):
@@ -138,7 +138,7 @@ Getting some random nouns
 Pairing verbs and nouns.
 ------------------------
 
-In The Twelve Days of Christmas, the verbs and nouns often share the same first letter:
+In The Twelve Days of Christmas, the verbs and nouns are often alliterative, which means they share the same first letter:
 
 -   Swans a Swimming
 -   Maids a Milking
@@ -146,7 +146,7 @@ In The Twelve Days of Christmas, the verbs and nouns often share the same first 
 -   Pipers Piping
 -   Drummers Drumming
 
-In your version of the song, they'll always share the same first letter, so you're going to need to build up a dictionary of nouns, with corresponding verbs that share the same letter.
+In your version of the song, nouns and verbs will always be alliterative, so you're going to need to build up a dictionary of nouns, with corresponding verbs that share the same letter.
 
 1.  You can start by creating an empty dictionary inside the `get_matching()` function:
 
@@ -154,7 +154,7 @@ In your version of the song, they'll always share the same first letter, so you'
 	matching = {}
 	```
 
-1.  Next you want to iterate through the random nouns you have selected, and add each one to the dictionary as a *key*, with an empty list as it's *value*.
+1.  Next you want to iterate through the random nouns you have selected, and add each one to the dictionary as a key, with an empty list as its value.
 
   ```python
 	for noun in rand_nouns:
@@ -207,11 +207,11 @@ In your version of the song, they'll always share the same first letter, so you'
 Turning loops to list comprehensions
 ------------------------------------
 
-You can skip this step if you like as you are only going to re-factor your code. Jump down to the next section, if you don't want to play with *comprehensions*.
+You can skip this step if you like as you are only going to re-factor your code. If you don't want to play with comprehensions, just move down to the next section. Otherwise, read on!
 
 At the moment you have a three loops all producing data structures such as lists and dictionaries.
 
-There's another way of producing these however, using list and dictionary comprehensions.
+There's another way of producing these, though, using list and dictionary comprehensions.
 
 1.  These four lines of code:
 
@@ -282,13 +282,13 @@ Getting suffixes for numerals
 
 The first line of the song changes, depending on the number of days. You might have:
 
-*On the 3rd day of Christmas...*
+'On the third day of Christmas...'
 
 **or**
 
-*On the 8th day of Christmas...*
+'On the eighth day of Christmas...'
 
-with the *suffix* on the number changing between **st**, **nd**, **rd** and **th**
+with the uffix on the number changing between **-st**, **-nd**, **-rd** and **-th**
 
 You can create a new function to handle this.
 

@@ -1,6 +1,6 @@
-title: The N Days Of Christmas
+title: The N Days of Christmas
 hero_image: images/banner.png
-description: In this resource you will create a script that will print out the song The N Days of Christmas song
+description: Create a script that will print out the song 'The N Days of Christmas'
 original_url: https://raspberrypi.org/learning/n-days-of-christmas
 theme: red
 duration: 2
@@ -9,9 +9,9 @@ ingredient: false
 copyedit: true
 curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
 interests: ''
-technologies: raspberry-pi, electronic-components, python
+technologies: python
 site_areas: projects
-hardware: raspberry-pi, electronic-components
+hardware: ''
 software: python
 version: 3
 last_tested: 2017-01-01
@@ -19,7 +19,7 @@ steps:
 - title: Introduction
 - title: What you will need
 - title: The N Days Of Christmas
-- title: Getting the text files.
+- title: Getting the text files
 - title: Importing the words
 - title: Getting all the verbs and nouns
 - title: Getting some random nouns

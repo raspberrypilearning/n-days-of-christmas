@@ -2,7 +2,7 @@
 
 ![](cover.png)
 
-In this resource you will create a script that will print out a version of the song 'The Twelve Days of Christmas', using a random selection of verbs and nouns, for any number of days you like.
+This is an archived resource. The repo will remain available but the resource will no longer be maintained or updated. Some or all parts of the resource may no longer work. To see our latest resources, please visit raspberrypi.org.
 
 ## Licence
 
